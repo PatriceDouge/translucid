@@ -188,7 +188,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-2xl pt-26 sm:pt-32 lg:pt-36 text-center">
+      <div className="mx-auto max-w-2xl px-4 pt-26 sm:pt-32 lg:pt-36 text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           Contact us
         </h1>
@@ -198,7 +198,7 @@ export default function Index() {
           where communication knows no bounds.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-12">
+      <form action="#" method="POST" className="mx-auto sm:mt-5 mt-16 max-w-xl sm:mt-12">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">

@@ -4,12 +4,13 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { UsersIcon, GlobeAmericasIcon, PencilSquareIcon, MicrophoneIcon } from '@heroicons/react/24/solid'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
+import Link from 'next/link';
 
 
 const navigation = [
-  { name: 'About us', href: '#' },
-  { name: 'Client Solutions', href: '#' },
-  { name: 'Career Opportunities', href: '#' },
+  { name: 'About us', href: 'about' },
+  { name: 'Client Solutions', href: 'client-solutions' },
+  { name: 'Career Opportunities', href: 'career' },
 ]
 
 function classNames(...classes: string[]) {
@@ -69,9 +70,9 @@ export default function Index() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -329,7 +330,7 @@ export default function Index() {
             type="submit"
             className="block w-full rounded-md bg-blue-950 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-900"
           >
-            Let's talk
+            {`Let's talk`}
           </button>
         </div>
       </form>

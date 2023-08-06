@@ -3,7 +3,6 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { UsersIcon, GlobeAmericasIcon, PencilSquareIcon, MicrophoneIcon } from '@heroicons/react/24/solid'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Switch } from '@headlessui/react'
 import Link from 'next/link';
 
 
@@ -169,7 +168,7 @@ export default function Index() {
           <p className="mt-6 text-lg leading-8 text-gray-600">
             At Translucid Languages, our client-centric approach involves understanding your distinct 
             requirements, objectives, and brand identity to provide tailored solutions aligned with your vision. 
-            Our commitment to meticulous care and confidentiality ensures your projects are in trusted hands
+            Our commitment to meticulous care and confidentiality ensures your projects are in trusted hands.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -303,34 +302,13 @@ export default function Index() {
               />
             </div>
           </div>
-          <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
-            <div className="flex h-6 items-center">
-              <Switch
-                checked={agreed}
-                onChange={setAgreed}
-                className={classNames(
-                  agreed ? 'bg-blue-900' : 'bg-gray-200',
-                  'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'
-                )}
-              >
-                <span className="sr-only">Agree to policies</span>
-                <span
-                  aria-hidden="true"
-                  className={classNames(
-                    agreed ? 'translate-x-3.5' : 'translate-x-0',
-                    'h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out'
-                  )}
-                />
-              </Switch>
-            </div>
-          </Switch.Group>
         </div>
-        <div className="mt-2">
+        <div className="mt-6">
           <button
             type="submit"
             className="block w-full rounded-md bg-blue-950 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-900"
           >
-            {`Let's talk`}
+            {`Submit`}
           </button>
         </div>
       </form>

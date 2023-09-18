@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import Image from 'next/image'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { UsersIcon, GlobeAmericasIcon, PencilSquareIcon, MicrophoneIcon } from '@heroicons/react/24/solid'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link';
+import WomenTalking from '@/images/women_talking.jpg';
 
 
 const navigation = [
@@ -45,7 +47,6 @@ const features = [
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [agreed, setAgreed] = useState(false)
 
 
   return (
@@ -53,7 +54,7 @@ export default function Index() {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="text-md font-semibold leading-6 text-gray-900">
+            <a href="#" className="text-lg font-semibold leading-6 text-gray-900">
                 Translucid
             </a>
           </div>
@@ -102,7 +103,7 @@ export default function Index() {
               </button>
             </div>
             <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
                     <a
@@ -128,33 +129,29 @@ export default function Index() {
         </Dialog>
       </header>
 
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true"
-        >
-        </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-50">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Empowering the Haitian Community Through Language Access.
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-            We are revolutionizing the world of language services with a fresh and innovative approach. 
-            We specialize in Haitian Creole and French translation, interpretation, transcription and localization,
-             offering a seamless bridge between cultures and languages like never before. Say goodbye to outdated 
-             methods and embrace a new era of communication.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-blue-950 px-5 py-3 text-md font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-              >
-                Get quote
-              </a>
-              <a href="#" className="text-md font-semibold leading-6 text-gray-900">
-                Learn more <span aria-hidden="true">→</span>
-              </a>
+      <div className="relative isolate pt-14">
+        <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
+          <div className="lg:mx-0 grid grid-cols-2 gap-8 lg:gap-y-6">
+            <div>
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Empowering the Haitian Community Through Language Access.
+              </h1>
+              <p className="mt-6 text-xl leading-8 text-gray-600"> 
+              We specialize in Haitian Creole and French translation, interpretation, transcription and localization,
+              offering a seamless bridge between cultures and languages like never before.
+              </p>
+              <div className="mt-10 flex gap-x-6">
+                <a
+                  href="#"
+                  className="rounded-md bg-blue-950 px-7 py-3 text-lg font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                  Get in touch
+                </a>
+              </div>
+            </div>
+            <div>
+              {/* Illustration taken from pch.vector on Freepik: https://lucid.pixsellz.io/ */}
+              <Image src={WomenTalking} alt="Women talking" />
             </div>
           </div>
         </div>
@@ -198,7 +195,7 @@ export default function Index() {
           where communication knows no bounds.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto sm:mt-5 mt-16 max-w-xl sm:mt-12">
+      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-12">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">

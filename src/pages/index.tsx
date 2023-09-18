@@ -129,12 +129,12 @@ export default function Index() {
         </Dialog>
       </header>
 
-      <div className="relative isolate pt-4 lg:pt-24 pb-24">
+      <div className="relative isolate pt-4 lg:pt-24 pb-10">
         <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
           <div className="lg:mx-0 grid grid-cols-2 gap-8 lg:gap-y-6">
             <div>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Empowering the Haitian Community Through Language Access.
+              Empowering You Through Language Access
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-600"> 
               We specialize in Haitian Creole and French translation, interpretation, transcription and localization,
@@ -157,11 +157,10 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="bg-slate-100">
-        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Client Solutions
+              About us
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               At Translucid Languages, our client-centric approach involves understanding your distinct 
@@ -170,6 +169,30 @@ export default function Index() {
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+              {features.map((feature) => (
+                <div key={feature.name} className="relative pl-16">
+                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-950">
+                      <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                    </div>
+                    {feature.name}
+                  </dt>
+                  <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+
+      <div className="bg-slate-100">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Client Solutions
+            </h1>
+          </div>
+          <div className="mx-auto mt-16 max-w-2xl sm:mt-12 lg:mt-18 lg:max-w-4xl">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
               {features.map((feature) => (
                 <div key={feature.name} className="relative pl-16">

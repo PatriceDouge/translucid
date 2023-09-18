@@ -61,24 +61,37 @@ export default function Index() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 inline-flex items-center lg:justify-end rounded-md p-2.5 text-gray-700"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
-                {item.name}
-              </Link>
-            ))}
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              Contact us
-            </a>
+          <div className="hidden lg:flex lg:flex-1 items-center lg:justify-end">
+            <div className="hidden lg:flex lg:gap-x-12 px-6">
+              {navigation.map((item) => (
+                <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+            <div className="flex">
+                <a
+                  href="#"
+                  className="rounded-md bg-blue-950 mx-4 px-6 py-3 text-md font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                  Contact us
+                </a>
+            </div>
+            <div className="flex">
+                <a
+                  href="#"
+                  className="rounded-md bg-white px-8 py-3 text-md font-semibold bg-blue-950 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                  Login
+                </a>
+            </div>
           </div>
         </nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -87,11 +100,6 @@ export default function Index() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Translucid</span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
               </a>
               <button
                 type="button"
@@ -103,7 +111,7 @@ export default function Index() {
               </button>
             </div>
             <div className="mt-6 flow-root">
-              <div className="my-6 divide-y divide-gray-500/10">
+              <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
                     <a
@@ -115,21 +123,13 @@ export default function Index() {
                     </a>
                   ))}
                 </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
-                </div>
               </div>
             </div>
           </Dialog.Panel>
         </Dialog>
       </header>
 
-      <div className="relative isolate pt-14">
+      <div className="relative isolate pt-4 lg:pt-24 pb-24">
         <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
           <div className="lg:mx-0 grid grid-cols-2 gap-8 lg:gap-y-6">
             <div>
@@ -157,33 +157,36 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Client Solutions
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            At Translucid Languages, our client-centric approach involves understanding your distinct 
-            requirements, objectives, and brand identity to provide tailored solutions aligned with your vision. 
-            Our commitment to meticulous care and confidentiality ensures your projects are in trusted hands.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            {features.map((feature) => (
-              <div key={feature.name} className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-950">
-                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  {feature.name}
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
-              </div>
-            ))}
-          </dl>
+      <div className="bg-slate-100">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Client Solutions
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              At Translucid Languages, our client-centric approach involves understanding your distinct 
+              requirements, objectives, and brand identity to provide tailored solutions aligned with your vision. 
+              Our commitment to meticulous care and confidentiality ensures your projects are in trusted hands.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+              {features.map((feature) => (
+                <div key={feature.name} className="relative pl-16">
+                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-950">
+                      <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                    </div>
+                    {feature.name}
+                  </dt>
+                  <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </div>
+
 
       <div className="mx-auto max-w-2xl px-4 pt-26 sm:pt-32 lg:pt-36 text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">

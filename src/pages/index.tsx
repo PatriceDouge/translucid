@@ -69,7 +69,7 @@ export default function Index() {
             </button>
           </div>
           <div className="hidden lg:flex lg:flex-1 items-center lg:justify-end">
-            <div className="hidden lg:flex lg:gap-x-12 px-6">
+            <div className="hidden lg:flex lg:gap-x-12 px-6 whitespace-nowrap">
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
                   {item.name}

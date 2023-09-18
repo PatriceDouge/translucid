@@ -131,13 +131,13 @@ export default function Index() {
 
       <div className="relative isolate pt-4 lg:pt-24 pb-10">
         <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
-          <div className="lg:mx-0 grid grid-cols-2 gap-8 lg:gap-y-6">
+          <div className="lg:mx-0 grid lg:grid-cols-2 sm:grid-cols-1 gap-8 lg:gap-y-6">
             <div>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Empowering You Through Language Access
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-600"> 
-              We specialize in Haitian Creole and French translation, interpretation, transcription and localization,
+              We specialize in Haitian Creole translation, interpretation, transcription and localization,
               offering a seamless bridge between cultures and languages like never before.
               </p>
               <div className="mt-10 flex gap-x-6">

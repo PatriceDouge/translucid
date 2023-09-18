@@ -79,7 +79,7 @@ export default function Index() {
             <div className="flex">
                 <a
                   href="#"
-                  className="rounded-md bg-blue-950 mx-4 px-6 py-3 text-md font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  className="rounded-md bg-blue-950 mx-4 px-6 py-3 text-md font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 whitespace-nowrap"
                 >
                   Contact us
                 </a>

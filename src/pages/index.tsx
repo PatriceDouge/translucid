@@ -69,7 +69,7 @@ const footer = {
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [open, setOpen] = useState(false)
+  const [openContactForm, setOpenContactForm] = useState(false)
   const cancelButtonRef = useRef(null)
 
 
@@ -104,6 +104,7 @@ export default function Index() {
                 <a
                   href="#"
                   className="rounded-md bg-blue-950 mx-4 px-6 py-3 text-md font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 whitespace-nowrap"
+                  onClick={() => setOpenContactForm(true)}
                 >
                   Contact us
                 </a>
@@ -168,7 +169,7 @@ export default function Index() {
                 <a
                   href="#"
                   className="rounded-md bg-blue-950 px-7 py-3 text-lg font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                  onClick={() => setOpen(true)}
+                  onClick={() => setOpenContactForm(true)}
                 >
                   Get in touch
                 </a>
@@ -182,8 +183,8 @@ export default function Index() {
         </div>
       </div>
 
-      <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
+      <Transition.Root show={openContactForm} as={Fragment}>
+      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpenContactForm}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -213,7 +214,7 @@ export default function Index() {
                   <button
                     type="submit"
                     className="block w-full rounded-md bg-blue-950 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-900"
-                    onClick={() => setOpen(false)}
+                    onClick={() => setOpenContactForm(false)}
                   >
                   {`Submit`}
                   </button>
@@ -253,7 +254,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="bg-slate-100 mt-10 py-24 sm:py-32">
+      <div className="bg-slate-100 my-10 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -274,7 +275,7 @@ export default function Index() {
       </div>
 
 
-      <div className="mx-auto max-w-2xl px-4 pt-26 sm:pt-32 lg:pt-36 text-center">
+      <div className="mx-auto max-w-2xl pt-20 sm:pt-32 lg:pt-24 text-center">
         <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           We're Hiring!
         </h2>
@@ -282,7 +283,7 @@ export default function Index() {
           Join our team! We're actively seeking talented translators and interpreters to shape language excellence with us.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-12">
+      <form action="#" method="POST" className="mx-auto my-16 max-w-xl sm:mt-12">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -390,12 +391,12 @@ export default function Index() {
         </div>
       </form>
 
-      <footer className="bg-white mt-8">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
-        <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; 2023 Translucid, Inc. All rights reserved.
-        </p>
-      </div>
+      <footer className="bg-slate-100 mt-8">
+        <div className="mx-auto max-w-7xl overflow-hidden px-6 py-10 sm:py-14 lg:px-8">
+          <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+            &copy; 2023 Translucid, Inc. All rights reserved.
+          </p>
+        </div>
     </footer>
     </div>
   )

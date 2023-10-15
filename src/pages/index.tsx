@@ -277,10 +277,10 @@ export default function Index() {
 
       <div className="mx-auto max-w-2xl pt-20 sm:pt-32 lg:pt-24 text-center">
         <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          We're Hiring!
+          {`We're Hiring!`}
         </h2>
         <p className="my-6 text-lg leading-8 text-gray-600">
-          Join our team! We're actively seeking talented translators and interpreters to shape language excellence with us.
+          {`Join our team! We're actively seeking talented translators and interpreters to shape language excellence with us.`}
         </p>
       </div>
       <form action="#" method="POST" className="mx-auto my-16 max-w-xl sm:mt-12">

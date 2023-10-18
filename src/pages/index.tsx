@@ -284,7 +284,7 @@ export default function Index() {
             {`Join our team! We're actively seeking talented translators and interpreters to shape language excellence with us.`}
           </p>
         </div>
-        <form action="#" method="POST" className="sm:mx-0 mx-4 my-16 max-w-xl sm:mt-12">
+        <form action="#" method="POST" className="sm:mx-auto mx-4 my-16 max-w-xl sm:mt-12">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
               <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">

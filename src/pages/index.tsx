@@ -18,13 +18,13 @@ const features = [
   {
     name: 'Translation',
     description:
-      'We provide professional translation services for documents, websites, marketing materials, legal documents, and more. Our team of experienced translators are fluent in Haitian Creole and English and can help you communicate your message accurately and effectively.',
+      'We provide professional translation services for documents, websites, marketing materials, legal documents, and more. Our team of native and expert matter translators are fluent in Haitian Creole and English and can help you communicate your message accurately and effectively.',
     icon: PencilSquareIcon,
   },
   {
     name: 'Interpretation',
     description:
-      'We offer both onsite and remote interpretation services for meetings, conferences, and events. Our team of skilled interpreters can provide simultaneous or consecutive interpretation to ensure effective communication between speakers of the Haitian Creole and English languages.',
+      'We offer both onsite and remote interpretation services for meetings, conferences, and events. Our team of certified and experienced interpreters can provide simultaneous or consecutive interpretation to ensure effective communication between speakers of the Haitian Creole and English languages.',
     icon: UsersIcon,
   },
   {

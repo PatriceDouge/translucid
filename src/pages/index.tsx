@@ -75,7 +75,7 @@ export default function Index() {
 
   return (
     <div className="bg-white">
-      <header className="absolute inset-x-0 top-0 z-50">
+      <header className="absolute inset-x-0 top-0 z-40">
         <nav className="flex items-center justify-between max-w-7xl mx-auto p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="text-4xl font-bold leading-6 text-gray-900">

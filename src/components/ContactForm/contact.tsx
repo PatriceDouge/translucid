@@ -3,7 +3,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 export default function Contact() {
     return (
-        <form action="#" method="POST" className="mx-auto mt-4 max-w-xl sm:mt-2">
+        <form action="#" method="POST" className="z-50 mx-auto mt-4 max-w-xl sm:mt-2">
             <div className="text-center mb-5">
                 <h1 className="text-xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     Contact our team

@@ -396,7 +396,10 @@ export default function Index() {
       <footer className="bg-slate-100 mt-8">
         <div className="mx-auto max-w-7xl overflow-hidden px-6 py-10 sm:py-14 lg:px-8">
           <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-            &copy; 2023 Translucid, Inc. All rights reserved.
+            &copy; 2023 Translucid Languages, LLC. All rights reserved. <br />
+            2450 Hollywood Boulevard, Suite 104 <br />
+            Hollywood FL 33020 <br />
+            1-800-777-1123
           </p>
         </div>
     </footer>

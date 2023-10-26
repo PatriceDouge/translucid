@@ -5,13 +5,14 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { UsersIcon, GlobeAmericasIcon, PencilSquareIcon, MicrophoneIcon, PhotoIcon, CheckIcon } from '@heroicons/react/24/solid'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link';
+
 import WomenTalking from '@/images/women_talking.jpg';
 import ContactForm from '@/components/ContactForm/contact'
 
 const navigation = [
-  { name: 'Client Solutions', href: 'client-solutions' },
-  { name: 'About us', href: 'about' },
-  { name: 'Career Opportunities', href: 'career' },
+  { name: 'Client Solutions', href: '/#client', scroll: 'client'},
+  { name: 'About us', href: '/#about', scroll: 'about'},
+  { name: 'Career Opportunities', href: '/#career', scroll: 'career' },
 ]
 
 const features = [
@@ -67,6 +68,13 @@ const footer = {
   ]
 }
 
+const scrollToSection = (id: string) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openContactForm, setOpenContactForm] = useState(false)
@@ -95,7 +103,10 @@ export default function Index() {
           <div className="hidden lg:flex lg:flex-1 items-center lg:justify-end">
             <div className="hidden lg:flex lg:gap-x-12 px-6 whitespace-nowrap">
               {navigation.map((item) => (
-                <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+                <Link key={item.name} href={item.href} onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.scroll);
+                }} className="text-sm font-semibold leading-6 text-gray-900">
                   {item.name}
                 </Link>
               ))}
@@ -226,7 +237,7 @@ export default function Index() {
       </Dialog>
     </Transition.Root>
 
-      <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+      <div id="client" className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Client Solutions
@@ -254,7 +265,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="bg-slate-100 my-10 py-24 sm:py-32">
+      <div id="about" className="bg-slate-100 my-10 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -275,7 +286,7 @@ export default function Index() {
       </div>
 
 
-      <div className="mx-auto max-w-2xl pt-20 sm:pt-32 lg:pt-24">
+      <div id="career"className="mx-auto max-w-2xl pt-20 sm:pt-32 lg:pt-24">
         <div className='text-center'>
           <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             {`We're Hiring!`}

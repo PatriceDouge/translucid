@@ -87,8 +87,8 @@ export default function Index() {
       <header className="absolute inset-x-0 top-0 z-40">
         <nav className="flex items-center justify-between max-w-7xl mx-auto p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#">
-            <Image src={Logo} alt="Women talking" width={200}/>
+            <a href="#" className="text-4xl font-bold leading-6 text-gray-900">
+                  Translucid
             </a>
           </div>
           <div className="flex lg:hidden">

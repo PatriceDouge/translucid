@@ -7,6 +7,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link';
 
 import WomenTalking from '@/images/women_talking.jpg';
+import Logo from '@/images/logo.png';
 import ContactForm from '@/components/ContactForm/contact'
 
 const navigation = [
@@ -86,8 +87,8 @@ export default function Index() {
       <header className="absolute inset-x-0 top-0 z-40">
         <nav className="flex items-center justify-between max-w-7xl mx-auto p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="text-4xl font-bold leading-6 text-gray-900">
-                Translucid
+            <a href="#">
+            <Image src={Logo} alt="Women talking" width={200}/>
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -413,8 +414,6 @@ export default function Index() {
         <div className="mx-auto max-w-7xl overflow-hidden px-6 py-10 sm:py-14 lg:px-8">
           <p className="mt-10 text-center text-xs leading-5 text-gray-500">
             &copy; 2023 Translucid Languages, LLC. All rights reserved. <br />
-            2450 Hollywood Boulevard, Suite 104 <br />
-            Hollywood FL 33020 <br />
             1-800-777-1123
           </p>
         </div>
